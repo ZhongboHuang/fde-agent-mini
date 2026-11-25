@@ -22,14 +22,10 @@ llm = ChatOpenAI(
     temperature=0.6
 )
 
-# @tool
-# def search(query: str) -> str:
-#     """搜索信息。"""
-#     return f"搜索结果：{query}"
-
 def get_weather(city: str) -> str:
     """获取指定城市的天气。"""
     return f"{city} 总是阳光明媚！"
+
 
 class Answer(BaseModel):
     summary: str
